@@ -12,6 +12,7 @@ typealias PeopleHandler = (People?) -> Void
 
 // Will play the role of data provider. Returns a model by its name.
 class PeopleProvider {
+   
     func getPeople(name: String, completion: PeopleHandler) {
         let person = [People(name: "Constantine", profession: "IOS Developer"),
                       People(name: "Dmytro", profession: "Web Developer"),

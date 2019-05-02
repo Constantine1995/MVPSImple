@@ -20,7 +20,6 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
     
     @IBAction func PersonOne(_ sender: Any) {
         peoplePresenter.peopleNameSelected(name: Person.PersonOne)
-        print("profession ")
     }
     
     @IBAction func personSecond(_ sender: Any) {

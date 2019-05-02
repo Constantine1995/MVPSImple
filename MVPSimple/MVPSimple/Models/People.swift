@@ -17,5 +17,4 @@ struct Person {
     static let PersonOne = "Constantine"
     static let PersonSecond = "Dmytro"
     static let PersonThird = "Nikolay"
-    
 }
