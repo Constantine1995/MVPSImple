@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		044FA4C3227B090C0064188D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044FA4C2227B090C0064188D /* AppDelegate.swift */; };
-		044FA4C5227B090C0064188D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044FA4C4227B090C0064188D /* ViewController.swift */; };
+		044FA4C5227B090C0064188D /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044FA4C4227B090C0064188D /* PeopleViewController.swift */; };
 		044FA4C8227B090C0064188D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044FA4C6227B090C0064188D /* Main.storyboard */; };
 		044FA4CA227B090D0064188D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044FA4C9227B090D0064188D /* Assets.xcassets */; };
 		044FA4CD227B090D0064188D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044FA4CB227B090D0064188D /* LaunchScreen.storyboard */; };
+		044FA4D5227B0E5B0064188D /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044FA4D4227B0E5B0064188D /* People.swift */; };
+		0470951F227B118000322BB3 /* PeopleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0470951E227B118000322BB3 /* PeopleProvider.swift */; };
+		04709522227B166900322BB3 /* PeopleViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04709521227B166900322BB3 /* PeopleViewDelegate.swift */; };
+		04709525227B16F000322BB3 /* PeoplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04709524227B16F000322BB3 /* PeoplePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		044FA4BF227B090C0064188D /* MVPSimple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVPSimple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044FA4C2227B090C0064188D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		044FA4C4227B090C0064188D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		044FA4C4227B090C0064188D /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		044FA4C7227B090C0064188D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		044FA4C9227B090D0064188D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		044FA4CC227B090D0064188D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		044FA4CE227B090D0064188D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		044FA4D4227B0E5B0064188D /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		0470951E227B118000322BB3 /* PeopleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleProvider.swift; sourceTree = "<group>"; };
+		04709521227B166900322BB3 /* PeopleViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewDelegate.swift; sourceTree = "<group>"; };
+		04709524227B16F000322BB3 /* PeoplePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,58 @@
 		044FA4C1227B090C0064188D /* MVPSimple */ = {
 			isa = PBXGroup;
 			children = (
+				04709520227B165700322BB3 /* Protocols */,
+				0470951D227B116D00322BB3 /* DataSource */,
+				044FA4D6227B0E660064188D /* Models */,
+				04709526227B172200322BB3 /* Views */,
+				04709523227B16DF00322BB3 /* Presenters */,
 				044FA4C2227B090C0064188D /* AppDelegate.swift */,
-				044FA4C4227B090C0064188D /* ViewController.swift */,
 				044FA4C6227B090C0064188D /* Main.storyboard */,
 				044FA4C9227B090D0064188D /* Assets.xcassets */,
-				044FA4CB227B090D0064188D /* LaunchScreen.storyboard */,
 				044FA4CE227B090D0064188D /* Info.plist */,
+				044FA4CB227B090D0064188D /* LaunchScreen.storyboard */,
 			);
 			path = MVPSimple;
+			sourceTree = "<group>";
+		};
+		044FA4D6227B0E660064188D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				044FA4D4227B0E5B0064188D /* People.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0470951D227B116D00322BB3 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				0470951E227B118000322BB3 /* PeopleProvider.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		04709520227B165700322BB3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				04709521227B166900322BB3 /* PeopleViewDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		04709523227B16DF00322BB3 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				04709524227B16F000322BB3 /* PeoplePresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		04709526227B172200322BB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				044FA4C4227B090C0064188D /* PeopleViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +187,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				044FA4C5227B090C0064188D /* ViewController.swift in Sources */,
+				0470951F227B118000322BB3 /* PeopleProvider.swift in Sources */,
+				04709522227B166900322BB3 /* PeopleViewDelegate.swift in Sources */,
+				044FA4C5227B090C0064188D /* PeopleViewController.swift in Sources */,
+				04709525227B16F000322BB3 /* PeoplePresenter.swift in Sources */,
+				044FA4D5227B0E5B0064188D /* People.swift in Sources */,
 				044FA4C3227B090C0064188D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
