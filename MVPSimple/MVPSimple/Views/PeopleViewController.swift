@@ -19,17 +19,16 @@ class PeopleViewController: UIViewController, PeopleViewDelegate {
     }
     
     @IBAction func PersonOne(_ sender: Any) {
-        peoplePresenter.peopleNameSelected(name: "Constantine")
+        peoplePresenter.peopleNameSelected(name: Person.PersonOne)
         print("profession ")
     }
-
     
     @IBAction func personSecond(_ sender: Any) {
-        peoplePresenter.peopleNameSelected(name: "Dmytro")
+        peoplePresenter.peopleNameSelected(name: Person.PersonSecond)
     }
     
     @IBAction func personThird(_ sender: Any) {
-        peoplePresenter.peopleNameSelected(name: "Nikolay")
+        peoplePresenter.peopleNameSelected(name: Person.PersonThird)
     }
     
     func displayPeople(profession: String) {
